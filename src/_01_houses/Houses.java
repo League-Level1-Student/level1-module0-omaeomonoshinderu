@@ -14,7 +14,14 @@ public class Houses {
 	rob.penDown();
 	rob.setPenColor(3, 252, 28);
 	rob.move(30);
-	
+	rob.setPenColor(4, 255, 0);
+	rob.turn(-90);
+	rob.move(180);
+	rob.turn(90);
+	rob.move(30);
+	rob.turn(90);
+	rob.move(180);
+	rob.setPenColor(3, 252, 28);
 	
 	}
 }
