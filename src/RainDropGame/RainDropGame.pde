@@ -16,17 +16,19 @@ void draw(){
       rect( mouseX, 250, 35, 50);
         fill( 255,255,255);
         text("Your score is now: " + score, 150, 50);
-         checkCatch(x);
+         checkCatch(randomNumber);
 }
   void checkCatch(int x){
          if (x > mouseX && x < mouseX+100 && y >= height){
             score++;
             y =0;
+            randomNumber = (int) random(width);
              println("Your score is now: " + score);
          }
-       else if (score > 0) 
+       else if (y >= height) {
             score--;
-            
+            y =0;
+            randomNumber = (int) random(width);
         println("Your score is now: " + score);
-         
+       }
     }
